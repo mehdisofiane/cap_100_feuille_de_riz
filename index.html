@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; connect-src 'self' https://script.google.com https://script.googleusercontent.com; worker-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<title>Cap 110 · Feuille de riz</title>
+<meta name="description" content="304 recettes à la feuille de riz, salées et sucrées, sans sucre ajouté : calories et macros, roue, frigo, planning de la semaine, liste de courses et bonnes adresses à Paris.">
+<meta name="theme-color" content="#f2f4ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1411" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cap Riz">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cap 110 · Feuille de riz">
+<meta property="og:description" content="304 recettes à la feuille de riz, sans sucre ajouté, avec les calories de chaque portion.">
+<link rel="icon" href="logo.svg?v=b7ef28331b" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=b7ef28331b" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=b7ef28331b">
+<link rel="manifest" href="manifest.webmanifest?v=b7ef28331b">
+<link rel="preload" href="unbounded-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=b7ef28331b">
+</head>
+<body>
+<svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="weave" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0 L0 5 M0 0 L5 0" stroke="var(--weave)" stroke-width=".8"/>
+    </pattern>
+    <pattern id="weaveBig" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0 L0 9 M0 0 L9 0" stroke="rgba(120,96,50,.28)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c76a"/><stop offset="1" stop-color="#cf8a33"/></linearGradient>
+    <linearGradient id="gGoldL" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8e2a8"/><stop offset="1" stop-color="#e2ad5a"/></linearGradient>
+    <radialGradient id="gPaper" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#fffdf6"/><stop offset="1" stop-color="#ebe2c8"/></radialGradient>
+    <pattern id="wLogo" width="2.4" height="2.4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V2.4M0 0H2.4" stroke="#b39a62" stroke-opacity=".35" stroke-width=".45"/></pattern>
+    <symbol id="logo" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="#efe7d2"/><circle cx="16" cy="16" r="13" fill="url(#wLogo)"/><circle cx="16" cy="16" r="13" fill="none" stroke="#d3c49c" stroke-width="2.5"/><path d="M16 3a13 13 0 0 1 12.4 9" fill="none" stroke="var(--jade)" stroke-width="2.5" stroke-linecap="round"/><path d="M6 21l6-6 4 4 9-9" fill="none" stroke="var(--chili)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#recettes" data-goto="recettes" aria-label="Cap 110, feuille de riz : accueil">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <b>Cap <i>110</i></b>
+      <small class="hide-md">Feuille de riz · par Mehdi</small>
+    </a>
+    <span class="status" id="status"><i></i><span>Chargement…</span></span>
+    <nav class="tabs" id="tabs" aria-label="Sections">
+      <button class="tab-btn" type="button" data-tab="recettes" aria-current="page"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M7 9.5l10 5M7 14.5l10-5"/></svg>Recettes</button>
+      <button class="tab-btn" type="button" data-tab="frigo"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2.5"/><path d="M6 10h12M9 6.5v1.5M9 13v2.5"/></svg>Frigo</button>
+      <button class="tab-btn" type="button" data-tab="semaine"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Semaine</button>
+      <button class="tab-btn" type="button" data-tab="courses"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.5 11.5h-11z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>Courses<span class="dot" id="cartDot" hidden>0</span></button>
+      <button class="tab-btn" type="button" data-tab="guide"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Guide</button>
+    </nav>
+    <button class="pill-btn" id="favTop" type="button" aria-label="Voir mes favoris">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+      <span class="count" id="favCount">0</span>
+    </button>
+    <button class="avatar" id="meBtn" type="button" aria-label="Créer ton profil">?</button>
+  </div>
+</header>
+
+<main>
+  <!-- ================= RECETTES ================= -->
+  <section id="v-recettes">
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow"><span id="hello"></span>Par Mehdi · zéro sucre ajouté</div>
+          <h1><span id="hN">304</span> recettes,<br><em>une seule feuille.</em></h1>
+          <p class="lede">Pizzas, bourek, tacos, mochis, baklava… Calories et macros calculées ingrédient par ingrédient. Partout où il faudrait du sucre : Pure Via Pâtisserie.</p>
+          <div class="stats">
+            <div class="stat"><b>≈ 34</b><span>kcal la feuille de 22 cm</span></div>
+            <div class="stat"><b id="hS">205</b><span>recettes salées</span></div>
+            <div class="stat"><b id="hD">99</b><span>douceurs sucrées</span></div>
+            <div class="stat"><b id="hP">102</b><span>à 25 g de protéines et plus</span></div>
+          </div>
+        </div>
+        <div class="wheel-zone">
+          <div class="wheel-box">
+            <svg class="wheel-pointer" viewBox="0 0 26 32" aria-hidden="true"><path d="M13 31 L2 6 A12 12 0 1 1 24 6Z" fill="var(--chili)"/><circle cx="13" cy="10" r="4" fill="#fff"/></svg>
+            <div class="wheel-disc" id="wheel"></div>
+            <button class="wheel-btn" id="spin" type="button">Tourner</button>
+          </div>
+          <button class="pick" id="pick" type="button" aria-live="polite"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="controls">
+        <div class="search-row">
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <span class="visually-hidden">Rechercher une recette ou un ingrédient</span>
+            <input id="q" type="search" placeholder="Poulet, mochi, harissa, sans cuisson…" autocomplete="off" enterkeyhint="search">
+          </label>
+          <div class="seg" role="group" aria-label="Type de recette">
+            <button type="button" data-cat="all" aria-pressed="true">Tout</button>
+            <button type="button" data-cat="sale" aria-pressed="false">Salé</button>
+            <button type="button" data-cat="sucre" aria-pressed="false">Sucré</button>
+          </div>
+          <button class="pill-btn" id="toggleFilters" type="button" aria-expanded="false" aria-controls="filters">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+            Filtres <span class="count" id="fCount" hidden>0</span>
+          </button>
+        </div>
+        <div class="filters" id="filters" hidden>
+          <div class="row"><span class="lab">Envies</span><div class="chips" id="tagChips"></div></div>
+          <div class="row"><span class="lab">Cuisson</span><div class="chips" id="cookChips"></div></div>
+          <div class="row">
+            <label class="lab" for="kmax">Calories max par portion</label>
+            <div class="range-row"><input id="kmax" type="range" min="100" max="450" step="10" value="450"><output id="kmaxOut" for="kmax">450 kcal</output></div>
+          </div>
+          <div class="row">
+            <label class="lab" for="pmin">Protéines min par portion</label>
+            <div class="range-row"><input id="pmin" type="range" min="0" max="40" step="1" value="0"><output id="pminOut" for="pmin">0 g</output></div>
+          </div>
+          <div class="row">
+            <label class="lab" for="sort">Trier par</label>
+            <select class="sel" id="sort">
+              <option value="mix">Mélange du chef</option>
+              <option value="kcal">Les moins caloriques</option>
+              <option value="prot">Les plus protéinées</option>
+              <option value="ratio">Meilleur ratio protéines / kcal</option>
+              <option value="time">Les plus rapides</option>
+              <option value="az">De A à Z</option>
+            </select>
+          </div>
+          <div><button class="linkish" id="reset" type="button">Tout réinitialiser</button></div>
+        </div>
+        <div class="chips scroll" id="famChips" aria-label="Familles de recettes"></div>
+      </div>
+      <div class="result-bar"><span class="count" id="rCount">304 recettes</span><span class="note" id="rNote"></span></div>
+      <div class="grid" id="grid"></div>
+      <div class="more"><button class="btn ghost" id="moreBtn" type="button" hidden>Afficher plus</button></div>
+      <div id="sentinel"></div>
+    </div>
+  </section>
+
+  <!-- ================= FRIGO ================= -->
+  <section id="v-frigo" hidden>
+    <div class="wrap">
+      <div class="view-head">
+        <div class="eyebrow">Anti-gaspi</div>
+        <h2>Qu'est-ce qu'il y a dans ton frigo ?</h2>
+        <p>Coche ce que tu as. Les recettes qui collent le mieux remontent, avec ce qu'il te manque. Les épices, sauces et le placard ne comptent pas.</p>
+      </div>
+      <div class="panel" id="fridgePicker"></div>
+      <div class="result-bar"><span class="count" id="frCount"></span><button class="linkish" id="frClear" type="button">Tout décocher</button></div>
+      <div class="fridge-list" id="fridgeList"></div>
+    </div>
+  </section>
+
+  <!-- ================= SEMAINE ================= -->
+  <section id="v-semaine" hidden>
+    <div class="wrap">
+      <div class="view-head">
+        <div class="eyebrow">Planning</div>
+        <h2>Ta semaine à la feuille de riz</h2>
+        <p>Un plat salé protéiné par repas, ajusté en portions à ton budget calorique, avec un dessert si la marge le permet. Touche un plat pour la recette, la flèche pour en changer.</p>
+      </div>
+      <div class="panel">
+        <div class="plan-ctrl">
+          <div>
+            <span class="lab">Repas par jour</span>
+            <div class="seg" role="group" aria-label="Repas par jour" id="mealsSeg">
+              <button type="button" data-m="1" aria-pressed="false">1</button>
+              <button type="button" data-m="2" aria-pressed="true">2</button>
+              <button type="button" data-m="3" aria-pressed="false">3</button>
+            </div>
+          </div>
+          <div>
+            <label class="lab" for="budget">Budget par repas</label>
+            <div class="range-row"><input id="budget" type="range" min="300" max="1000" step="25" value="650"><output id="budgetOut" for="budget">650 kcal</output></div>
+          </div>
+          <div class="actions flush">
+            <button class="chip" id="dessertChip" type="button" aria-pressed="true">Avec dessert</button>
+            <button class="btn" id="regen" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>Nouvelle semaine</button>
+          </div>
+        </div>
+        <div class="plan-sum" id="planSum"></div>
+      </div>
+      <div class="days" id="days"></div>
+      <div class="actions"><button class="btn hot" id="planToCart" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7h14l-1.5 11h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>Tout mettre dans les courses</button></div>
+    </div>
+  </section>
+
+  <!-- ================= COURSES ================= -->
+  <section id="v-courses" hidden>
+    <div class="wrap">
+      <div class="view-head">
+        <div class="eyebrow">Liste de courses</div>
+        <h2>Tes courses, rayon par rayon</h2>
+        <p>Quantités additionnées sur toutes tes recettes, avec où trouver chaque produit. Coche en magasin, même sans réseau.</p>
+      </div>
+      <div id="cartBox"></div>
+    </div>
+  </section>
+
+  <!-- ================= GUIDE ================= -->
+  <section id="v-guide" hidden>
+    <div class="wrap">
+      <div class="view-head">
+        <div class="eyebrow">Le guide</div>
+        <h2>Tout savoir sur la feuille de riz</h2>
+        <p>Les vrais chiffres, les gestes qui font la différence, les échanges light, les adresses pour tout acheter et comment installer le site sur ton téléphone.</p>
+      </div>
+      <div id="guideBox"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-id"><a class="brand" href="#recettes" data-goto="recettes"><svg aria-hidden="true"><use href="#logo"/></svg><b>Cap <i>110</i></b></a><span class="by">Imaginé et cuisiné par Mehdi</span></div>
+    <p>Pas de mot de passe, pas de cookie publicitaire, pas de traceur. Ton prénom, ton pays et la date de tes visites sont transmis à Mehdi pour savoir qui utilise le site ; tes favoris, ton frigo et ta liste de courses restent sur ton appareil. Calories estimées à ± 10 % ; ce site ne remplace pas l'avis d'un médecin ou d'un diététicien.</p>
+  </div>
+</footer>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="sheet-panel" id="sheetPanel"></div></div>
+<div class="cook" id="cook" hidden role="dialog" aria-modal="true" aria-label="Mode cuisine"></div>
+<div class="modal" id="welcome" hidden role="dialog" aria-modal="true" aria-labelledby="wTitle">
+  <form class="modal-panel" id="welcomeForm" novalidate>
+    <button class="round wclose" id="wClose" type="button" aria-label="Fermer" hidden><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="w-brand"><svg aria-hidden="true"><use href="#logo"/></svg><div><b>Cap <i>110</i></b><span>Feuille de riz · par Mehdi</span></div></div>
+    <h2 id="wTitle">Qui cuisine aujourd'hui ?</h2>
+    <p class="note">Chaque personne a son propre espace : favoris, frigo, semaine et liste de courses. Ce que tu enregistres ne se mélange jamais avec celui des autres.</p>
+    <div class="field"><label for="wName">Ton prénom</label><input class="input" id="wName" name="prenom" type="text" autocomplete="given-name" maxlength="30" required></div>
+    <div class="field"><label for="wCountry">Ton pays de résidence</label><select class="input" id="wCountry" name="pays" required></select></div>
+    <div class="hp" aria-hidden="true"><label for="wHp">Ne pas remplir</label><input id="wHp" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+    <p class="err" id="wErr" role="alert" hidden></p>
+    <button class="btn big" type="submit">C'est parti</button>
+    <p class="note small">En validant, ton prénom et ton pays sont transmis à Mehdi, l'auteur du site, avec la date de tes visites, pour savoir qui l'utilise. Rien d'autre : tes favoris, ton frigo et ta liste restent sur ton appareil.</p>
+    <div id="wOthers"></div>
+  </form>
+</div>
+<div class="modal" id="prof" hidden role="dialog" aria-modal="true" aria-labelledby="profTitle">
+  <div class="modal-panel">
+    <button class="round wclose" id="profClose" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div id="profBody" class="prof-body"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="data.js?v=b7ef28331b"></script>
+<script src="art.js?v=b7ef28331b"></script>
+<script src="app.js?v=b7ef28331b"></script>
+</body>
+</html>
